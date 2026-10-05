@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: lab4-grtic-josue-moreno
+    runtime: static
+    buildCommand: echo "Sitio estatico, sin compilacion"
+    staticPublishPath: .

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gerencia de Recursos TIC | Laboratorio 4</title>
+  <meta name="description" content="Laboratorio 4 de GRTIC: importancia de la gerencia de recursos tecnológicos de información y comunicación. Josue Moreno, 9GS241." />
+  <meta name="author" content="Josue Moreno" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖧</text></svg>" />
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+
+  <header class="topbar" id="topbar">
+    <a href="#inicio" class="brand"><span class="brand-dot"></span>GRTIC · Lab 4</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav class="nav" id="nav">
+      <a href="#concepto">Concepto</a>
+      <a href="#ciclo">Ciclo de gestión</a>
+      <a href="#importancia">Importancia</a>
+      <a href="#marcos">Marcos</a>
+      <a href="#caso">Caso</a>
+      <a href="#quiz">Autoevaluación</a>
+      <a href="#fuentes">Fuentes</a>
+    </nav>
+    <button class="theme-btn" id="themeBtn" aria-label="Cambiar tema">◐</button>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <canvas id="netCanvas" aria-hidden="true"></canvas>
+    <div class="hero-content">
+      <p class="eyebrow">Laboratorio #4 · Gerencia de Recursos de Tecnología de Información y Comunicación</p>
+      <h1>La tecnología no se administra sola:<br><span class="grad">se gerencia.</span></h1>
+      <p class="lead">Un recorrido por cómo las empresas planifican, diseñan, implementan y evalúan su infraestructura TIC, y por qué gestionarla bien marca la diferencia entre un gasto y una ventaja competitiva.</p>
+      <div class="hero-cta">
+        <a href="#ciclo" class="btn btn-primary">Explorar el ciclo</a>
+        <a href="#quiz" class="btn btn-ghost">Pon a prueba lo aprendido</a>
+      </div>
+      <div class="author-card">
+        <div class="avatar">JM</div>
+        <div>
+          <strong>Josue Moreno</strong>
+          <span>Grupo 9GS241</span>
+        </div>
+      </div>
+    </div>
+    <a href="#concepto" class="scroll-hint" aria-label="Bajar">↓</a>
+  </section>
+
+  <main>
+    <!-- OBJETIVO / CONCEPTO -->
+    <section class="section" id="concepto">
+      <div class="container">
+        <p class="kicker">01 · Concepto</p>
+        <h2>¿Qué es la gerencia de recursos tecnológicos?</h2>
+        <div class="two-col">
+          <div>
+            <p>La <strong>gerencia de recursos de tecnología de información y comunicación (TIC)</strong> es el conjunto de procesos mediante los cuales una organización <em>planifica, diseña, implementa y evalúa</em> su infraestructura tecnológica (hardware, software, redes, datos, servicios en la nube y personas) para que esta apoye, de forma eficiente y segura, los objetivos del negocio.</p>
+            <p>No se trata solo de comprar equipos o instalar programas. Gerenciar TIC significa tomar decisiones sobre <strong>qué</strong> tecnología se necesita, <strong>cuánto</strong> invertir, <strong>quién</strong> es responsable, <strong>cómo</strong> se mide su valor y <strong>cuándo</strong> debe renovarse o retirarse.</p>
+            <blockquote>
+              La TI genera valor cuando está alineada con la estrategia: la tecnología correcta, en el momento correcto, al costo correcto y con el riesgo controlado.
+            </blockquote>
+          </div>
+          <div class="pillars">
+            <div class="pillar"><span>🎯</span><div><strong>Alineación estratégica</strong><p>La TI responde a las metas del negocio, no al revés.</p></div></div>
+            <div class="pillar"><span>💰</span><div><strong>Entrega de valor</strong><p>Cada inversión tecnológica debe justificar su retorno.</p></div></div>
+            <div class="pillar"><span>🛡️</span><div><strong>Gestión de riesgos</strong><p>Proteger la continuidad, la información y la reputación.</p></div></div>
+            <div class="pillar"><span>⚙️</span><div><strong>Gestión de recursos</strong><p>Uso óptimo de personas, infraestructura y presupuesto.</p></div></div>
+            <div class="pillar"><span>📊</span><div><strong>Medición del desempeño</strong><p>Indicadores que demuestran si la TI cumple lo prometido.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CICLO -->
+    <section class="section alt" id="ciclo">
+      <div class="container">
+        <p class="kicker">02 · La gerencia de recursos tecnológicos</p>
+        <h2>El ciclo de gestión de la infraestructura TIC</h2>
+        <p class="section-intro">La infraestructura TIC de una empresa se gestiona como un ciclo continuo: lo que se aprende al evaluar alimenta la siguiente planificación. Selecciona cada fase para ver sus actividades, herramientas y entregables.</p>
+
+        <div class="cycle-wrap">
+          <div class="cycle" id="cycle" role="tablist" aria-label="Fases del ciclo">
+            <svg viewBox="0 0 300 300" class="cycle-ring" aria-hidden="true">
+              <circle cx="150" cy="150" r="118" />
+              <path d="M150 32 A118 118 0 0 1 268 150" class="arc" />
+              <path d="M268 150 A118 118 0 0 1 150 268" class="arc" />
+              <path d="M150 268 A118 118 0 0 1 32 150" class="arc" />
+              <path d="M32 150 A118 118 0 0 1 150 32" class="arc" />
+            </svg>
+            <div class="cycle-center"><span id="cycleNum">1</span><small>de 4</small></div>
+            <button class="phase-btn p1 active" data-phase="0" role="tab" aria-selected="true">📋<span>Planificación</span></button>
+            <button class="phase-btn p2" data-phase="1" role="tab" aria-selected="false">📐<span>Diseño</span></button>
+            <button class="phase-btn p3" data-phase="2" role="tab" aria-selected="false">🚀<span>Implementación</span></button>
+            <button class="phase-btn p4" data-phase="3" role="tab" aria-selected="false">📈<span>Evaluación</span></button>
+          </div>
+
+          <article class="phase-panel" id="phasePanel" role="tabpanel" aria-live="polite"></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMPORTANCIA -->
+    <section class="section" id="importancia">
+      <div class="container">
+        <p class="kicker">03 · Importancia de la gestión de la infraestructura TIC</p>
+        <h2>Seis frentes que sostienen a la empresa digital</h2>
+        <p class="section-intro">Una infraestructura mal gestionada se traduce en caídas de servicio, brechas de seguridad, licencias desperdiciadas y personal frustrado. Haz clic en cada tarjeta para ver por qué importa, buenas prácticas y cómo medirlo.</p>
+
+        <div class="cards" id="cards"></div>
+      </div>
+    </section>
+
+    <!-- MARCOS -->
+    <section class="section alt" id="marcos">
+      <div class="container">
+        <p class="kicker">04 · Marcos de referencia</p>
+        <h2>No hay que inventar la rueda</h2>
+        <p class="section-intro">La gerencia de TIC se apoya en marcos y estándares internacionales reconocidos, que ofrecen buenas prácticas probadas.</p>
+        <div class="frameworks">
+          <div class="fw"><h3>COBIT 2019</h3><p class="fw-org">ISACA</p><p>Marco de gobierno y gestión de la TI empresarial. Define objetivos para alinear la TI con el negocio, optimizar recursos y gestionar riesgos.</p><span class="tag">Gobierno</span></div>
+          <div class="fw"><h3>ITIL 4</h3><p class="fw-org">AXELOS / PeopleCert</p><p>Buenas prácticas para la gestión de servicios de TI: gestión de incidentes, cambios, activos, capacidad y mejora continua.</p><span class="tag">Servicios</span></div>
+          <div class="fw"><h3>ISO/IEC 27001</h3><p class="fw-org">ISO / IEC</p><p>Norma para establecer un Sistema de Gestión de Seguridad de la Información (SGSI) basado en la evaluación de riesgos.</p><span class="tag">Seguridad</span></div>
+          <div class="fw"><h3>ISO/IEC 38500</h3><p class="fw-org">ISO / IEC</p><p>Principios para que la alta dirección gobierne el uso de la TI: responsabilidad, estrategia, adquisición, desempeño, conformidad y conducta humana.</p><span class="tag">Dirección</span></div>
+          <div class="fw"><h3>NIST CSF 2.0</h3><p class="fw-org">NIST</p><p>Marco de ciberseguridad con seis funciones: Gobernar, Identificar, Proteger, Detectar, Responder y Recuperar.</p><span class="tag">Ciberseguridad</span></div>
+          <div class="fw"><h3>TOGAF</h3><p class="fw-org">The Open Group</p><p>Metodología de arquitectura empresarial para diseñar la relación entre negocio, datos, aplicaciones y tecnología.</p><span class="tag">Arquitectura</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASO -->
+    <section class="section" id="caso">
+      <div class="container">
+        <p class="kicker">05 · Caso aplicado</p>
+        <h2>Ejemplo: “Distribuidora Istmo” <small>(empresa ficticia)</small></h2>
+        <p class="section-intro">Para aterrizar los conceptos, este es un ejemplo ilustrativo de cómo una distribuidora mediana aplicaría el ciclo de gestión al migrar su sistema de inventario.</p>
+        <ol class="timeline">
+          <li><span class="tl-dot">📋</span><div><h4>Planificación</h4><p>Detectan que el inventario se lleva en hojas de cálculo y hay quiebres de stock. La gerencia define el objetivo: <em>reducir los errores de inventario y tener datos en tiempo real</em>. Se aprueba el presupuesto y se analiza el riesgo.</p></div></li>
+          <li><span class="tl-dot">📐</span><div><h4>Diseño</h4><p>Se elige un ERP en la nube, se diseña la red de las bodegas con Wi-Fi empresarial, lectores de código de barras, copias de seguridad automáticas y acceso con autenticación multifactor.</p></div></li>
+          <li><span class="tl-dot">🚀</span><div><h4>Implementación</h4><p>Piloto en una bodega, migración de datos, capacitación de 40 colaboradores y despliegue por fases con un plan de reversión por si algo falla.</p></div></li>
+          <li><span class="tl-dot">📈</span><div><h4>Evaluación</h4><p>Se miden indicadores: disponibilidad del sistema, tiempo de despacho, exactitud del inventario y satisfacción de usuarios. Los hallazgos alimentan el siguiente plan (por ejemplo, integrar ventas en línea).</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section class="section alt" id="quiz">
+      <div class="container narrow">
+        <p class="kicker">06 · Autoevaluación</p>
+        <h2>¿Cuánto aprendiste?</h2>
+        <p class="section-intro">Cinco preguntas rápidas sobre el contenido del sitio.</p>
+        <div class="quiz" id="quizBox"></div>
+      </div>
+    </section>
+
+    <!-- FUENTES -->
+    <section class="section" id="fuentes">
+      <div class="container">
+        <p class="kicker">07 · Metodología y fuentes</p>
+        <h2>¿Cómo se investigó?</h2>
+        <div class="two-col">
+          <div>
+            <h3>Técnicas de búsqueda utilizadas</h3>
+            <ul class="checklist">
+              <li><strong>Buscador general (Google)</strong> con operadores: <code>"gestión de infraestructura TI"</code>, <code>site:.edu</code>, <code>filetype:pdf</code>, <code>COBIT OR ITIL</code>.</li>
+              <li><strong>Google Académico</strong> para artículos revisados por pares y conteo de citas.</li>
+              <li><strong>Bases de datos académicas:</strong> Scopus, IEEE Xplore, Redalyc y SciELO, filtrando por año y área (sistemas de información, gestión).</li>
+              <li><strong>Fuentes normativas oficiales:</strong> ISO, ISACA, NIST y AXELOS.</li>
+              <li><strong>Operadores booleanos</strong> (AND, OR, NOT) y palabras clave en español e inglés: <em>IT governance, IT infrastructure management, IT asset management</em>.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Referencias (APA 7)</h3>
+            <ul class="refs">
+              <li>AXELOS. (2019). <em>ITIL Foundation: ITIL 4 edition</em>. TSO.</li>
+              <li>Bharadwaj, A. S. (2000). A resource-based perspective on information technology capability and firm performance: An empirical investigation. <em>MIS Quarterly, 24</em>(1), 169–196.</li>
+              <li>Henderson, J. C., &amp; Venkatraman, N. (1993). Strategic alignment: Leveraging information technology for transforming organizations. <em>IBM Systems Journal, 32</em>(1), 4–16.</li>
+              <li>ISACA. (2018). <em>COBIT 2019 framework: Introduction and methodology</em>. ISACA.</li>
+              <li>International Organization for Standardization. (2015). <em>ISO/IEC 38500:2015 Information technology — Governance of IT for the organization</em>. ISO.</li>
+              <li>International Organization for Standardization. (2022). <em>ISO/IEC 27001:2022 Information security, cybersecurity and privacy protection — Information security management systems — Requirements</em>. ISO.</li>
+              <li>Laudon, K. C., &amp; Laudon, J. P. (2020). <em>Management information systems: Managing the digital firm</em> (16th ed.). Pearson.</li>
+              <li>Mason, R. O. (1986). Four ethical issues of the information age. <em>MIS Quarterly, 10</em>(1), 5–12.</li>
+              <li>National Institute of Standards and Technology. (2024). <em>The NIST Cybersecurity Framework (CSF) 2.0</em> (NIST CSWP 29). NIST.</li>
+              <li>The Open Group. (2022). <em>The TOGAF standard</em> (10th ed.). The Open Group.</li>
+              <li>UNESCO. (2021). <em>Recomendación sobre la ética de la inteligencia artificial</em>. UNESCO.</li>
+              <li>Weill, P., &amp; Ross, J. W. (2004). <em>IT governance: How top performers manage IT decision rights for superior results</em>. Harvard Business School Press.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="conclusion">
+          <h3>Conclusión</h3>
+          <p>La gerencia de recursos TIC convierte la tecnología en un activo estratégico. Planificar evita inversiones sin rumbo; diseñar asegura que las soluciones encajen; implementar con orden reduce riesgos; y evaluar permite mejorar de forma continua. Sobre ese ciclo, la gestión de hardware y software, el monitoreo, la seguridad, la capacitación, la integración y la ética garantizan que la infraestructura sea confiable, eficiente y responsable. En una economía digital, gestionar bien la TI no es opcional: es una condición para competir.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Josue Moreno</strong> · Grupo 9GS241<br>
+        <span>Laboratorio #4 — Gerencia de Recursos de Tecnología de Información y Comunicación</span>
+      </div>
+      <a href="#inicio" class="btn btn-ghost small">↑ Volver arriba</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
