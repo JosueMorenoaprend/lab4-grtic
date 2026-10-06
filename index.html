@@ -3,179 +3,384 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gerencia de Recursos TIC | Laboratorio 4</title>
-  <meta name="description" content="Laboratorio 4 de GRTIC: importancia de la gerencia de recursos tecnológicos de información y comunicación. Josue Moreno, 9GS241." />
+  <title>Gerencia de Recursos TIC — Laboratorio 4</title>
+  <meta name="description" content="Laboratorio 4 de Gerencia de Recursos de Tecnología de Información y Comunicación. Por Josue Moreno, grupo 9GS241." />
   <meta name="author" content="Josue Moreno" />
+  <meta name="theme-color" content="#0a0a0a" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖧</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230a0a0a'/><circle cx='50' cy='50' r='22' fill='none' stroke='white' stroke-width='6'/></svg>" />
 </head>
 <body>
+
+  <!-- Intro -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <span class="loader-label">GRTIC — Laboratorio 04</span>
+      <span class="loader-count" id="loaderCount">00</span>
+    </div>
+  </div>
+
   <div class="progress" id="progress"></div>
 
-  <header class="topbar" id="topbar">
-    <a href="#inicio" class="brand"><span class="brand-dot"></span>GRTIC · Lab 4</a>
-    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false">☰</button>
-    <nav class="nav" id="nav">
-      <a href="#concepto">Concepto</a>
-      <a href="#ciclo">Ciclo de gestión</a>
-      <a href="#importancia">Importancia</a>
-      <a href="#marcos">Marcos</a>
-      <a href="#caso">Caso</a>
-      <a href="#quiz">Autoevaluación</a>
-      <a href="#fuentes">Fuentes</a>
+  <!-- Navegación -->
+  <header class="nav" id="nav">
+    <a href="#inicio" class="nav-logo">GRTIC<span>/04</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#concepto"><i>01</i>Concepto</a>
+      <a href="#ciclo"><i>02</i>Ciclo</a>
+      <a href="#importancia"><i>03</i>Importancia</a>
+      <a href="#marcos"><i>04</i>Marcos</a>
+      <a href="#caso"><i>05</i>Caso</a>
+      <a href="#quiz"><i>06</i>Quiz</a>
+      <a href="#fuentes"><i>07</i>Fuentes</a>
     </nav>
-    <button class="theme-btn" id="themeBtn" aria-label="Cambiar tema">◐</button>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button>
   </header>
 
   <!-- HERO -->
   <section class="hero" id="inicio">
-    <canvas id="netCanvas" aria-hidden="true"></canvas>
-    <div class="hero-content">
-      <p class="eyebrow">Laboratorio #4 · Gerencia de Recursos de Tecnología de Información y Comunicación</p>
-      <h1>La tecnología no se administra sola:<br><span class="grad">se gerencia.</span></h1>
-      <p class="lead">Un recorrido por cómo las empresas planifican, diseñan, implementan y evalúan su infraestructura TIC, y por qué gestionarla bien marca la diferencia entre un gasto y una ventaja competitiva.</p>
-      <div class="hero-cta">
-        <a href="#ciclo" class="btn btn-primary">Explorar el ciclo</a>
-        <a href="#quiz" class="btn btn-ghost">Pon a prueba lo aprendido</a>
+    <div class="hero-grid">
+      <div class="hero-text">
+        <p class="label">Laboratorio N.º 4 · Gerencia de Recursos de Tecnología de Información y Comunicación</p>
+        <h1 class="hero-title">
+          <span class="line"><span>La tecnología</span></span>
+          <span class="line"><span>no se administra:</span></span>
+          <span class="line"><span><em>se gerencia.</em></span></span>
+        </h1>
+        <p class="hero-lead">Un recorrido por la manera en que las organizaciones planifican, diseñan, implementan y evalúan su infraestructura tecnológica, y por qué gestionarla con criterio convierte un gasto en una ventaja competitiva.</p>
       </div>
-      <div class="author-card">
-        <div class="avatar">JM</div>
-        <div>
-          <strong>Josue Moreno</strong>
-          <span>Grupo 9GS241</span>
-        </div>
-      </div>
+      <figure class="hero-media">
+        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1400&q=80" alt="Cables de red conectados a un servidor" />
+        <figcaption>Fig. 01 — Infraestructura de red</figcaption>
+      </figure>
     </div>
-    <a href="#concepto" class="scroll-hint" aria-label="Bajar">↓</a>
+    <dl class="hero-meta">
+      <div><dt>Autor</dt><dd>Josue Moreno</dd></div>
+      <div><dt>Grupo</dt><dd>9GS241</dd></div>
+      <div><dt>Asignatura</dt><dd>Gerencia de Recursos TIC</dd></div>
+      <div><dt>Año</dt><dd>2026</dd></div>
+    </dl>
   </section>
 
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Planificación</span><b>✳</b><span>Diseño</span><b>✳</b><span>Implementación</span><b>✳</b><span>Evaluación</span><b>✳</b>
+      <span>Planificación</span><b>✳</b><span>Diseño</span><b>✳</b><span>Implementación</span><b>✳</b><span>Evaluación</span><b>✳</b>
+    </div>
+  </div>
+
   <main>
-    <!-- OBJETIVO / CONCEPTO -->
+    <!-- 01 CONCEPTO -->
     <section class="section" id="concepto">
-      <div class="container">
-        <p class="kicker">01 · Concepto</p>
-        <h2>¿Qué es la gerencia de recursos tecnológicos?</h2>
-        <div class="two-col">
-          <div>
-            <p>La <strong>gerencia de recursos de tecnología de información y comunicación (TIC)</strong> es el conjunto de procesos mediante los cuales una organización <em>planifica, diseña, implementa y evalúa</em> su infraestructura tecnológica (hardware, software, redes, datos, servicios en la nube y personas) para que esta apoye, de forma eficiente y segura, los objetivos del negocio.</p>
-            <p>No se trata solo de comprar equipos o instalar programas. Gerenciar TIC significa tomar decisiones sobre <strong>qué</strong> tecnología se necesita, <strong>cuánto</strong> invertir, <strong>quién</strong> es responsable, <strong>cómo</strong> se mide su valor y <strong>cuándo</strong> debe renovarse o retirarse.</p>
-            <blockquote>
-              La TI genera valor cuando está alineada con la estrategia: la tecnología correcta, en el momento correcto, al costo correcto y con el riesgo controlado.
-            </blockquote>
+      <div class="wrap">
+        <header class="sec-head">
+          <span class="sec-num">01</span>
+          <p class="label">Concepto</p>
+          <h2 class="reveal">¿Qué significa <em>gerenciar</em> los recursos tecnológicos?</h2>
+        </header>
+
+        <div class="concept">
+          <div class="concept-text reveal">
+            <p class="big">La gerencia de recursos de tecnología de información y comunicación es la disciplina que se encarga de que la tecnología de una organización —equipos, programas, redes, datos, servicios en la nube y, sobre todo, personas— trabaje a favor de sus objetivos estratégicos.</p>
+            <p>Gerenciar no equivale a comprar computadoras o instalar sistemas. Implica decidir <strong>qué</strong> tecnología se necesita, <strong>cuánto</strong> conviene invertir, <strong>quién</strong> responde por ella, <strong>cómo</strong> se demuestra el valor que aporta y <strong>cuándo</strong> llega el momento de renovarla o retirarla. Es, en esencia, administrar la tecnología con la misma rigurosidad con la que se administran las finanzas o el talento humano.</p>
+            <p>Cuando esta gestión falla, las consecuencias son visibles: sistemas que se caen en el peor momento, información expuesta, licencias pagadas que nadie usa y colaboradores que trabajan contra sus propias herramientas. Cuando funciona, la tecnología pasa desapercibida y el negocio simplemente avanza.</p>
           </div>
-          <div class="pillars">
-            <div class="pillar"><span>🎯</span><div><strong>Alineación estratégica</strong><p>La TI responde a las metas del negocio, no al revés.</p></div></div>
-            <div class="pillar"><span>💰</span><div><strong>Entrega de valor</strong><p>Cada inversión tecnológica debe justificar su retorno.</p></div></div>
-            <div class="pillar"><span>🛡️</span><div><strong>Gestión de riesgos</strong><p>Proteger la continuidad, la información y la reputación.</p></div></div>
-            <div class="pillar"><span>⚙️</span><div><strong>Gestión de recursos</strong><p>Uso óptimo de personas, infraestructura y presupuesto.</p></div></div>
-            <div class="pillar"><span>📊</span><div><strong>Medición del desempeño</strong><p>Indicadores que demuestran si la TI cumple lo prometido.</p></div></div>
+          <figure class="concept-media reveal">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80" alt="Equipo de trabajo colaborando con computadoras portátiles" loading="lazy" />
+            <figcaption>Fig. 02 — Las personas son el primer recurso tecnológico</figcaption>
+          </figure>
+        </div>
+
+        <div class="principles">
+          <p class="label">Los cinco principios que guían la gestión de TI</p>
+          <ol>
+            <li class="reveal"><span>01</span><h3>Alineación estratégica</h3><p>La tecnología responde a las metas del negocio, y no al revés.</p></li>
+            <li class="reveal"><span>02</span><h3>Entrega de valor</h3><p>Cada inversión tecnológica debe justificar el beneficio que produce.</p></li>
+            <li class="reveal"><span>03</span><h3>Gestión del riesgo</h3><p>Se protege la continuidad de la operación, la información y la reputación.</p></li>
+            <li class="reveal"><span>04</span><h3>Uso óptimo de recursos</h3><p>Personas, infraestructura y presupuesto se aprovechan sin desperdicio.</p></li>
+            <li class="reveal"><span>05</span><h3>Medición del desempeño</h3><p>Los indicadores demuestran si la TI cumple lo que promete.</p></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 CICLO -->
+    <section class="section dark" id="ciclo">
+      <div class="wrap">
+        <header class="sec-head">
+          <span class="sec-num">02</span>
+          <p class="label">La gerencia de recursos tecnológicos</p>
+          <h2 class="reveal">Un ciclo que <em>nunca termina</em>.</h2>
+          <p class="sec-intro reveal">La infraestructura de TIC de una empresa no se gestiona una sola vez: se planifica, se diseña, se implementa y se evalúa de manera continua. Lo que se aprende al evaluar se convierte en el punto de partida de la siguiente planificación.</p>
+        </header>
+
+        <div class="cycle">
+          <aside class="cycle-aside">
+            <div class="cycle-sticky">
+              <svg class="cycle-svg" viewBox="0 0 200 200" aria-hidden="true">
+                <circle cx="100" cy="100" r="80" class="track" />
+                <circle cx="100" cy="100" r="80" class="fill" id="cycleFill" />
+                <g class="dots">
+                  <circle cx="100" cy="20" r="5" data-d="0" />
+                  <circle cx="180" cy="100" r="5" data-d="1" />
+                  <circle cx="100" cy="180" r="5" data-d="2" />
+                  <circle cx="20" cy="100" r="5" data-d="3" />
+                </g>
+              </svg>
+              <div class="cycle-count"><span id="cycleNum">01</span><small>/ 04</small></div>
+              <p class="cycle-name" id="cycleName">Planificación</p>
+            </div>
+          </aside>
+
+          <div class="phases">
+            <article class="phase" data-phase="0" data-name="Planificación">
+              <figure><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" alt="Gráficos de análisis en una computadora portátil" loading="lazy" /></figure>
+              <p class="label">Fase 01</p>
+              <h3>Planificación</h3>
+              <p class="phase-q">¿Qué tecnología necesita la empresa, y por qué?</p>
+              <p>Es la fase estratégica. Se diagnostica la infraestructura actual, se identifican las necesidades del negocio y se traza el rumbo de la tecnología en los próximos años. Aquí se alinea la TI con la misión y los objetivos de la organización, se fija el presupuesto y se establecen prioridades. Una buena planificación evita la trampa más común: invertir en tecnología porque está de moda, y no porque resuelve un problema real.</p>
+              <div class="phase-cols">
+                <div><h4>Actividades clave</h4><ul><li>Diagnóstico e inventario de la infraestructura actual</li><li>Definición de objetivos de TI alineados al plan estratégico</li><li>Análisis costo-beneficio: costo total de propiedad (TCO) y retorno de inversión (ROI)</li><li>Identificación de riesgos y requisitos legales</li><li>Priorización de proyectos en una hoja de ruta</li></ul></div>
+                <div><h4>Entregables</h4><ul><li>Plan Estratégico de Tecnologías de Información (PETI)</li><li>Presupuesto y cartera de proyectos</li><li>Matriz de riesgos inicial</li><li>Políticas de uso de TI</li></ul></div>
+              </div>
+              <p class="tags"><span>Análisis FODA</span><span>COBIT 2019</span><span>Análisis de brechas</span><span>Cuadro de mando de TI</span></p>
+            </article>
+
+            <article class="phase" data-phase="1" data-name="Diseño">
+              <figure><img src="https://images.unsplash.com/photo-1721244653652-268631ec049a?auto=format&fit=crop&w=1200&q=80" alt="Planos arquitectónicos con vistas y plantas de un edificio" loading="lazy" /></figure>
+              <p class="label">Fase 02</p>
+              <h3>Diseño</h3>
+              <p class="phase-q">¿Cómo debe construirse la solución?</p>
+              <p>El plan se traduce en una arquitectura concreta, del mismo modo en que un arquitecto convierte una idea en planos. Se definen los componentes de hardware, software, redes, almacenamiento y seguridad; la forma en que se conectan entre sí, y los niveles de servicio que deben garantizar. Un diseño sólido piensa desde el inicio en el crecimiento, la disponibilidad y la protección de la información, porque corregir después siempre resulta más caro.</p>
+              <div class="phase-cols">
+                <div><h4>Actividades clave</h4><ul><li>Diseño de la arquitectura de red, servidores y nube</li><li>Selección de proveedores y tecnologías</li><li>Definición de acuerdos de nivel de servicio (SLA) y capacidad</li><li>Seguridad integrada desde el diseño</li><li>Previsión de redundancia, respaldos y continuidad</li></ul></div>
+                <div><h4>Entregables</h4><ul><li>Documento de arquitectura técnica</li><li>Diagramas de red y topología</li><li>Especificaciones técnicas y pliegos de compra</li><li>Plan de recuperación ante desastres (DRP)</li></ul></div>
+              </div>
+              <p class="tags"><span>TOGAF</span><span>ITIL 4</span><span>IaaS · PaaS · SaaS</span><span>Security by design</span></p>
+            </article>
+
+            <article class="phase" data-phase="2" data-name="Implementación">
+              <figure><img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&q=80" alt="Profesionales trabajando frente a varias pantallas" loading="lazy" /></figure>
+              <p class="label">Fase 03</p>
+              <h3>Implementación</h3>
+              <p class="phase-q">¿Cómo se pone en marcha sin detener el negocio?</p>
+              <p>Es el momento de ejecutar lo diseñado: adquirir, instalar, configurar, migrar datos, probar y poner en producción. Esta fase exige una gestión de proyectos disciplinada y un control riguroso de los cambios, porque cualquier error se traslada de inmediato a la operación. Igual de importante es preparar a las personas: una herramienta que nadie sabe utilizar es una inversión perdida.</p>
+              <div class="phase-cols">
+                <div><h4>Actividades clave</h4><ul><li>Adquisición e instalación de equipos y licencias</li><li>Configuración, integración y migración de datos</li><li>Pruebas funcionales, de carga y de seguridad</li><li>Gestión del cambio y comunicación con los usuarios</li><li>Capacitación y puesta en producción por etapas</li></ul></div>
+                <div><h4>Entregables</h4><ul><li>Infraestructura en operación</li><li>Actas de pruebas y de aceptación</li><li>Manuales técnicos y de usuario</li><li>Registro en la base de datos de configuración (CMDB)</li></ul></div>
+              </div>
+              <p class="tags"><span>PMBOK · Scrum</span><span>Gestión de cambios</span><span>Plan de reversión</span><span>Ambientes de prueba</span></p>
+            </article>
+
+            <article class="phase" data-phase="3" data-name="Evaluación">
+              <figure><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="Panel de analítica de rendimiento en una pantalla" loading="lazy" /></figure>
+              <p class="label">Fase 04</p>
+              <h3>Evaluación</h3>
+              <p class="phase-q">¿La tecnología cumple lo que prometió?</p>
+              <p>Se mide el desempeño de la infraestructura frente a los objetivos planteados. Mediante indicadores, auditorías y la opinión de los usuarios se detectan oportunidades de mejora y se decide qué optimizar, renovar o retirar. La evaluación cierra el ciclo y, al mismo tiempo, lo reinicia: sus hallazgos alimentan la siguiente planificación. Es la aplicación práctica del principio de mejora continua.</p>
+              <div class="phase-cols">
+                <div><h4>Actividades clave</h4><ul><li>Medición de indicadores: disponibilidad, tiempos de respuesta, costos</li><li>Auditorías técnicas y de seguridad</li><li>Encuestas de satisfacción de usuarios</li><li>Verificación del cumplimiento de SLA y normativas</li><li>Decisiones de renovación, optimización o retiro</li></ul></div>
+                <div><h4>Entregables</h4><ul><li>Informe de desempeño de TI</li><li>Hallazgos y recomendaciones de auditoría</li><li>Plan de mejora continua</li><li>Insumos para el siguiente ciclo</li></ul></div>
+              </div>
+              <p class="tags"><span>Ciclo PDCA</span><span>Dashboards</span><span>Auditoría ISO/IEC 27001</span><span>KPI</span></p>
+            </article>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CICLO -->
-    <section class="section alt" id="ciclo">
-      <div class="container">
-        <p class="kicker">02 · La gerencia de recursos tecnológicos</p>
-        <h2>El ciclo de gestión de la infraestructura TIC</h2>
-        <p class="section-intro">La infraestructura TIC de una empresa se gestiona como un ciclo continuo: lo que se aprende al evaluar alimenta la siguiente planificación. Selecciona cada fase para ver sus actividades, herramientas y entregables.</p>
-
-        <div class="cycle-wrap">
-          <div class="cycle" id="cycle" role="tablist" aria-label="Fases del ciclo">
-            <svg viewBox="0 0 300 300" class="cycle-ring" aria-hidden="true">
-              <circle cx="150" cy="150" r="118" />
-              <path d="M150 32 A118 118 0 0 1 268 150" class="arc" />
-              <path d="M268 150 A118 118 0 0 1 150 268" class="arc" />
-              <path d="M150 268 A118 118 0 0 1 32 150" class="arc" />
-              <path d="M32 150 A118 118 0 0 1 150 32" class="arc" />
-            </svg>
-            <div class="cycle-center"><span id="cycleNum">1</span><small>de 4</small></div>
-            <button class="phase-btn p1 active" data-phase="0" role="tab" aria-selected="true">📋<span>Planificación</span></button>
-            <button class="phase-btn p2" data-phase="1" role="tab" aria-selected="false">📐<span>Diseño</span></button>
-            <button class="phase-btn p3" data-phase="2" role="tab" aria-selected="false">🚀<span>Implementación</span></button>
-            <button class="phase-btn p4" data-phase="3" role="tab" aria-selected="false">📈<span>Evaluación</span></button>
-          </div>
-
-          <article class="phase-panel" id="phasePanel" role="tabpanel" aria-live="polite"></article>
-        </div>
-      </div>
-    </section>
-
-    <!-- IMPORTANCIA -->
+    <!-- 03 IMPORTANCIA -->
     <section class="section" id="importancia">
-      <div class="container">
-        <p class="kicker">03 · Importancia de la gestión de la infraestructura TIC</p>
-        <h2>Seis frentes que sostienen a la empresa digital</h2>
-        <p class="section-intro">Una infraestructura mal gestionada se traduce en caídas de servicio, brechas de seguridad, licencias desperdiciadas y personal frustrado. Haz clic en cada tarjeta para ver por qué importa, buenas prácticas y cómo medirlo.</p>
+      <div class="wrap">
+        <header class="sec-head">
+          <span class="sec-num">03</span>
+          <p class="label">Importancia de la gestión de la infraestructura de TIC</p>
+          <h2 class="reveal">Seis frentes que <em>sostienen</em> a la empresa digital.</h2>
+          <p class="sec-intro reveal">Una infraestructura bien gestionada no se nota; una mal gestionada se nota todos los días. Estos son los frentes en los que se juega esa diferencia. Selecciona cada uno para conocer por qué importa, qué prácticas lo fortalecen y cómo se mide.</p>
+        </header>
 
-        <div class="cards" id="cards"></div>
-      </div>
-    </section>
+        <div class="acc" id="acc">
+          <article class="acc-item">
+            <button class="acc-head" aria-expanded="false"><span class="acc-n">01</span><span class="acc-t">Gestión de hardware y software</span><span class="acc-i"></span></button>
+            <div class="acc-body"><div class="acc-inner">
+              <figure><img src="https://images.unsplash.com/photo-1597092430872-09a3f4338c60?auto=format&fit=crop&w=900&q=80" alt="Primer plano de un procesador sobre una placa base" loading="lazy" /></figure>
+              <div class="acc-content">
+                <p class="acc-lead">Consiste en controlar el ciclo de vida completo de cada activo tecnológico: desde que se adquiere hasta que se retira de forma segura. Saber qué existe, dónde está, quién lo usa y en qué estado se encuentra es la base de cualquier otra decisión.</p>
+                <div class="acc-cols">
+                  <div><h4>Por qué importa</h4><ul><li>Evita compras duplicadas y equipos obsoletos.</li><li>Garantiza el uso legal de las licencias y previene sanciones.</li><li>Permite planificar renovaciones y presupuestos con anticipación.</li><li>Agiliza el soporte técnico.</li></ul></div>
+                  <div><h4>Buenas prácticas</h4><ul><li>Inventario actualizado de activos (ITAM y CMDB).</li><li>Control de licencias y aplicación oportuna de parches.</li><li>Política formal de renovación tecnológica.</li><li>Disposición segura y responsable de equipos.</li></ul></div>
+                  <div><h4>Cómo se mide</h4><p>Porcentaje de activos inventariados, licencias en cumplimiento, antigüedad promedio del parque informático y costo total de propiedad.</p></div>
+                </div>
+              </div>
+            </div></div>
+          </article>
 
-    <!-- MARCOS -->
-    <section class="section alt" id="marcos">
-      <div class="container">
-        <p class="kicker">04 · Marcos de referencia</p>
-        <h2>No hay que inventar la rueda</h2>
-        <p class="section-intro">La gerencia de TIC se apoya en marcos y estándares internacionales reconocidos, que ofrecen buenas prácticas probadas.</p>
-        <div class="frameworks">
-          <div class="fw"><h3>COBIT 2019</h3><p class="fw-org">ISACA</p><p>Marco de gobierno y gestión de la TI empresarial. Define objetivos para alinear la TI con el negocio, optimizar recursos y gestionar riesgos.</p><span class="tag">Gobierno</span></div>
-          <div class="fw"><h3>ITIL 4</h3><p class="fw-org">AXELOS / PeopleCert</p><p>Buenas prácticas para la gestión de servicios de TI: gestión de incidentes, cambios, activos, capacidad y mejora continua.</p><span class="tag">Servicios</span></div>
-          <div class="fw"><h3>ISO/IEC 27001</h3><p class="fw-org">ISO / IEC</p><p>Norma para establecer un Sistema de Gestión de Seguridad de la Información (SGSI) basado en la evaluación de riesgos.</p><span class="tag">Seguridad</span></div>
-          <div class="fw"><h3>ISO/IEC 38500</h3><p class="fw-org">ISO / IEC</p><p>Principios para que la alta dirección gobierne el uso de la TI: responsabilidad, estrategia, adquisición, desempeño, conformidad y conducta humana.</p><span class="tag">Dirección</span></div>
-          <div class="fw"><h3>NIST CSF 2.0</h3><p class="fw-org">NIST</p><p>Marco de ciberseguridad con seis funciones: Gobernar, Identificar, Proteger, Detectar, Responder y Recuperar.</p><span class="tag">Ciberseguridad</span></div>
-          <div class="fw"><h3>TOGAF</h3><p class="fw-org">The Open Group</p><p>Metodología de arquitectura empresarial para diseñar la relación entre negocio, datos, aplicaciones y tecnología.</p><span class="tag">Arquitectura</span></div>
+          <article class="acc-item">
+            <button class="acc-head" aria-expanded="false"><span class="acc-n">02</span><span class="acc-t">Monitoreo y optimización de recursos</span><span class="acc-i"></span></button>
+            <div class="acc-body"><div class="acc-inner">
+              <figure><img src="https://images.unsplash.com/photo-1584169417032-d34e8d805e8b?auto=format&fit=crop&w=900&q=80" alt="Pasillo de una sala de servidores con gabinetes metálicos" loading="lazy" /></figure>
+              <div class="acc-content">
+                <p class="acc-lead">Supone vigilar en tiempo real el comportamiento de servidores, redes y aplicaciones para anticiparse a las fallas antes de que el usuario las perciba, y ajustar la capacidad a la demanda real: ni de más, ni de menos.</p>
+                <div class="acc-cols">
+                  <div><h4>Por qué importa</h4><ul><li>Detecta problemas antes de que interrumpan la operación.</li><li>Evita tanto el sobredimensionamiento como la escasez de recursos.</li><li>Reduce costos de energía y de servicios en la nube.</li><li>Fundamenta las decisiones en datos, no en suposiciones.</li></ul></div>
+                  <div><h4>Buenas prácticas</h4><ul><li>Herramientas de monitoreo con alertas automáticas (Zabbix, Nagios).</li><li>Gestión de la capacidad y del rendimiento.</li><li>Virtualización y consolidación de servidores.</li><li>Revisión periódica del consumo en la nube.</li></ul></div>
+                  <div><h4>Cómo se mide</h4><p>Disponibilidad del servicio (uptime), tiempo medio entre fallas (MTBF), tiempo medio de reparación (MTTR) y nivel de uso de procesador, memoria y almacenamiento.</p></div>
+                </div>
+              </div>
+            </div></div>
+          </article>
+
+          <article class="acc-item">
+            <button class="acc-head" aria-expanded="false"><span class="acc-n">03</span><span class="acc-t">Seguridad tecnológica</span><span class="acc-i"></span></button>
+            <div class="acc-body"><div class="acc-inner">
+              <figure><img src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&w=900&q=80" alt="Candado sobre el teclado de una computadora" loading="lazy" /></figure>
+              <div class="acc-content">
+                <p class="acc-lead">Protege los tres atributos esenciales de la información: confidencialidad, integridad y disponibilidad. En una empresa digital, un solo incidente de seguridad puede detener la operación, comprometer datos de clientes y dañar una reputación construida durante años.</p>
+                <div class="acc-cols">
+                  <div><h4>Por qué importa</h4><ul><li>Un ciberataque puede paralizar por completo el negocio.</li><li>Resguarda los datos de clientes y colaboradores.</li><li>Permite cumplir las leyes de protección de datos.</li><li>Asegura la continuidad de las operaciones.</li></ul></div>
+                  <div><h4>Buenas prácticas</h4><ul><li>Sistema de Gestión de Seguridad de la Información según ISO/IEC 27001.</li><li>Autenticación multifactor y principio de mínimo privilegio.</li><li>Respaldos bajo la regla 3-2-1 y planes de recuperación probados.</li><li>Cortafuegos, antimalware, cifrado y actualizaciones constantes.</li></ul></div>
+                  <div><h4>Cómo se mide</h4><p>Número de incidentes, tiempo de detección y de respuesta, porcentaje de sistemas actualizados y resultados de las pruebas de recuperación.</p></div>
+                </div>
+              </div>
+            </div></div>
+          </article>
+
+          <article class="acc-item">
+            <button class="acc-head" aria-expanded="false"><span class="acc-n">04</span><span class="acc-t">Capacitación continua</span><span class="acc-i"></span></button>
+            <div class="acc-body"><div class="acc-inner">
+              <figure><img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=900&q=80" alt="Grupo de personas en una sala de capacitación con proyector" loading="lazy" /></figure>
+              <div class="acc-content">
+                <p class="acc-lead">La tecnología más avanzada fracasa si las personas no saben usarla o se resisten a adoptarla. La capacitación continua mantiene al personal técnico al día frente a un entorno que cambia cada año y prepara a los usuarios para aprovechar, y proteger, las herramientas que tienen a su alcance.</p>
+                <div class="acc-cols">
+                  <div><h4>Por qué importa</h4><ul><li>El error humano es una de las causas más frecuentes de incidentes.</li><li>Eleva la productividad y el retorno de cada inversión.</li><li>Disminuye la resistencia al cambio.</li><li>Mantiene vigentes las competencias del equipo de TI.</li></ul></div>
+                  <div><h4>Buenas prácticas</h4><ul><li>Plan anual de formación técnica y para usuarios.</li><li>Concienciación en ciberseguridad con simulacros de phishing.</li><li>Certificaciones profesionales (ITIL, CompTIA, nube).</li><li>Manuales, tutoriales y una mesa de ayuda accesible.</li></ul></div>
+                  <div><h4>Cómo se mide</h4><p>Horas de formación por colaborador, tasa de adopción de nuevas herramientas, resultados de los simulacros y reducción de solicitudes de soporte por desconocimiento.</p></div>
+                </div>
+              </div>
+            </div></div>
+          </article>
+
+          <article class="acc-item">
+            <button class="acc-head" aria-expanded="false"><span class="acc-n">05</span><span class="acc-t">Integración tecnológica</span><span class="acc-i"></span></button>
+            <div class="acc-body"><div class="acc-inner">
+              <figure><img src="https://images.unsplash.com/photo-1541093585232-b5c4f5bc431a?auto=format&fit=crop&w=900&q=80" alt="Cable blanco sobre fondo negro" loading="lazy" /></figure>
+              <div class="acc-content">
+                <p class="acc-lead">Busca que sistemas, datos y plataformas funcionen como un solo ecosistema y no como islas aisladas. Cuando las aplicaciones se comunican entre sí, la información fluye sin reprocesos y la empresa obtiene una visión única de sus clientes y operaciones.</p>
+                <div class="acc-cols">
+                  <div><h4>Por qué importa</h4><ul><li>Elimina las islas de información y la doble digitación.</li><li>Ofrece una visión unificada del negocio.</li><li>Agiliza los procesos de principio a fin.</li><li>Hace posible la transformación digital y el crecimiento.</li></ul></div>
+                  <div><h4>Buenas prácticas</h4><ul><li>Arquitectura empresarial con estándares comunes.</li><li>Uso de API, servicios web y middleware.</li><li>Sistemas integrados de gestión (ERP, CRM).</li><li>Gobierno y calidad de los datos.</li></ul></div>
+                  <div><h4>Cómo se mide</h4><p>Procesos automatizados, interfaces integradas, tiempo de ciclo de los procesos y errores ocasionados por el reingreso manual de datos.</p></div>
+                </div>
+              </div>
+            </div></div>
+          </article>
+
+          <article class="acc-item">
+            <button class="acc-head" aria-expanded="false"><span class="acc-n">06</span><span class="acc-t">Ética y uso responsable de la tecnología</span><span class="acc-i"></span></button>
+            <div class="acc-body"><div class="acc-inner">
+              <figure><img src="https://images.unsplash.com/photo-1580106815433-a5b1d1d53d85?auto=format&fit=crop&w=900&q=80" alt="Pasillo largo con puertas de vidrio" loading="lazy" /></figure>
+              <div class="acc-content">
+                <p class="acc-lead">No todo lo que es técnicamente posible es correcto. El uso responsable de la tecnología respeta la privacidad, la equidad, el medio ambiente y la ley. Hoy, con la inteligencia artificial y el análisis masivo de datos, esta dimensión ha pasado de ser deseable a ser indispensable.</p>
+                <div class="acc-cols">
+                  <div><h4>Por qué importa</h4><ul><li>Genera confianza en clientes, colaboradores y la sociedad.</li><li>Previene sanciones legales y daños a la reputación.</li><li>Evita sesgos y usos indebidos de los datos y la IA.</li><li>Contribuye a la sostenibilidad mediante una TI verde.</li></ul></div>
+                  <div><h4>Buenas prácticas</h4><ul><li>Código de ética y política de uso aceptable.</li><li>Atender privacidad, exactitud, propiedad y accesibilidad de la información (Mason, 1986).</li><li>Uso transparente y supervisado de la inteligencia artificial.</li><li>Reciclaje de residuos electrónicos y eficiencia energética.</li></ul></div>
+                  <div><h4>Cómo se mide</h4><p>Cumplimiento de políticas, incidentes de privacidad, porcentaje de residuos electrónicos reciclados y consumo energético de la infraestructura.</p></div>
+                </div>
+              </div>
+            </div></div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- CASO -->
-    <section class="section" id="caso">
-      <div class="container">
-        <p class="kicker">05 · Caso aplicado</p>
-        <h2>Ejemplo: “Distribuidora Istmo” <small>(empresa ficticia)</small></h2>
-        <p class="section-intro">Para aterrizar los conceptos, este es un ejemplo ilustrativo de cómo una distribuidora mediana aplicaría el ciclo de gestión al migrar su sistema de inventario.</p>
-        <ol class="timeline">
-          <li><span class="tl-dot">📋</span><div><h4>Planificación</h4><p>Detectan que el inventario se lleva en hojas de cálculo y hay quiebres de stock. La gerencia define el objetivo: <em>reducir los errores de inventario y tener datos en tiempo real</em>. Se aprueba el presupuesto y se analiza el riesgo.</p></div></li>
-          <li><span class="tl-dot">📐</span><div><h4>Diseño</h4><p>Se elige un ERP en la nube, se diseña la red de las bodegas con Wi-Fi empresarial, lectores de código de barras, copias de seguridad automáticas y acceso con autenticación multifactor.</p></div></li>
-          <li><span class="tl-dot">🚀</span><div><h4>Implementación</h4><p>Piloto en una bodega, migración de datos, capacitación de 40 colaboradores y despliegue por fases con un plan de reversión por si algo falla.</p></div></li>
-          <li><span class="tl-dot">📈</span><div><h4>Evaluación</h4><p>Se miden indicadores: disponibilidad del sistema, tiempo de despacho, exactitud del inventario y satisfacción de usuarios. Los hallazgos alimentan el siguiente plan (por ejemplo, integrar ventas en línea).</p></div></li>
+    <!-- CITA -->
+    <section class="quote-band">
+      <img src="https://images.unsplash.com/photo-1535136104956-115a2cd67fc4?auto=format&fit=crop&w=2000&q=80" alt="" loading="lazy" />
+      <div class="wrap">
+        <blockquote class="reveal">
+          <p>“La tecnología genera valor solo cuando está alineada con la estrategia: la herramienta correcta, en el momento correcto, al costo correcto y con el riesgo bajo control.”</p>
+          <cite>— Idea central del alineamiento estratégico (Henderson &amp; Venkatraman, 1993)</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- 04 MARCOS -->
+    <section class="section" id="marcos">
+      <div class="wrap">
+        <header class="sec-head">
+          <span class="sec-num">04</span>
+          <p class="label">Marcos de referencia</p>
+          <h2 class="reveal">No hace falta <em>reinventar</em> la rueda.</h2>
+          <p class="sec-intro reveal">La gerencia de TIC se apoya en marcos y normas internacionales que reúnen décadas de experiencia. Conocerlos permite trabajar con un lenguaje común y con prácticas ya probadas.</p>
+        </header>
+        <div class="fw-grid">
+          <article class="fw reveal"><span class="fw-tag">Gobierno</span><h3>COBIT 2019</h3><p class="fw-org">ISACA</p><p>Marco de gobierno y gestión de la TI empresarial. Define objetivos para alinear la tecnología con el negocio, optimizar recursos y controlar riesgos.</p></article>
+          <article class="fw reveal"><span class="fw-tag">Servicios</span><h3>ITIL 4</h3><p class="fw-org">AXELOS · PeopleCert</p><p>Conjunto de buenas prácticas para gestionar servicios de TI: incidentes, cambios, activos, capacidad y mejora continua.</p></article>
+          <article class="fw reveal"><span class="fw-tag">Seguridad</span><h3>ISO/IEC 27001</h3><p class="fw-org">ISO · IEC</p><p>Norma que establece los requisitos de un Sistema de Gestión de Seguridad de la Información basado en la evaluación de riesgos.</p></article>
+          <article class="fw reveal"><span class="fw-tag">Dirección</span><h3>ISO/IEC 38500</h3><p class="fw-org">ISO · IEC</p><p>Principios para que la alta dirección gobierne el uso de la TI: responsabilidad, estrategia, adquisición, desempeño, conformidad y conducta humana.</p></article>
+          <article class="fw reveal"><span class="fw-tag">Ciberseguridad</span><h3>NIST CSF 2.0</h3><p class="fw-org">NIST</p><p>Marco organizado en seis funciones: gobernar, identificar, proteger, detectar, responder y recuperar.</p></article>
+          <article class="fw reveal"><span class="fw-tag">Arquitectura</span><h3>TOGAF</h3><p class="fw-org">The Open Group</p><p>Metodología de arquitectura empresarial que relaciona el negocio con los datos, las aplicaciones y la tecnología.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 CASO -->
+    <section class="section gray" id="caso">
+      <div class="wrap">
+        <header class="sec-head">
+          <span class="sec-num">05</span>
+          <p class="label">Caso aplicado · empresa ficticia con fines ilustrativos</p>
+          <h2 class="reveal">Distribuidora Istmo: <em>del Excel a la nube</em>.</h2>
+          <p class="sec-intro reveal">Una distribuidora mediana controla su inventario en hojas de cálculo. Los errores provocan faltantes, pedidos atrasados y clientes molestos. Así aplicaría el ciclo de gestión para resolverlo.</p>
+        </header>
+        <ol class="steps">
+          <li class="reveal"><span class="step-n">01</span><h3>Planificar</h3><p>La gerencia define un objetivo medible: reducir los errores de inventario y disponer de información en tiempo real. Aprueba el presupuesto y analiza los riesgos del cambio.</p></li>
+          <li class="reveal"><span class="step-n">02</span><h3>Diseñar</h3><p>Se elige un ERP en la nube, se diseña una red inalámbrica empresarial para las bodegas y se incorporan lectores de código de barras, respaldos automáticos y autenticación multifactor.</p></li>
+          <li class="reveal"><span class="step-n">03</span><h3>Implementar</h3><p>Se realiza un piloto en una sola bodega, se migran los datos, se capacita a cuarenta colaboradores y se despliega por fases, con un plan de reversión ante cualquier falla.</p></li>
+          <li class="reveal"><span class="step-n">04</span><h3>Evaluar</h3><p>Se miden la disponibilidad del sistema, el tiempo de despacho, la exactitud del inventario y la satisfacción de los usuarios. Los resultados abren el siguiente ciclo: integrar las ventas en línea.</p></li>
         </ol>
       </div>
     </section>
 
-    <!-- QUIZ -->
-    <section class="section alt" id="quiz">
-      <div class="container narrow">
-        <p class="kicker">06 · Autoevaluación</p>
-        <h2>¿Cuánto aprendiste?</h2>
-        <p class="section-intro">Cinco preguntas rápidas sobre el contenido del sitio.</p>
+    <!-- 06 QUIZ -->
+    <section class="section dark" id="quiz">
+      <div class="wrap narrow">
+        <header class="sec-head center">
+          <span class="sec-num">06</span>
+          <p class="label">Autoevaluación</p>
+          <h2 class="reveal">¿Cuánto <em>aprendiste</em>?</h2>
+          <p class="sec-intro reveal">Cinco preguntas breves sobre el contenido del sitio.</p>
+        </header>
         <div class="quiz" id="quizBox"></div>
       </div>
     </section>
 
-    <!-- FUENTES -->
+    <!-- 07 FUENTES -->
     <section class="section" id="fuentes">
-      <div class="container">
-        <p class="kicker">07 · Metodología y fuentes</p>
-        <h2>¿Cómo se investigó?</h2>
-        <div class="two-col">
-          <div>
-            <h3>Técnicas de búsqueda utilizadas</h3>
-            <ul class="checklist">
-              <li><strong>Buscador general (Google)</strong> con operadores: <code>"gestión de infraestructura TI"</code>, <code>site:.edu</code>, <code>filetype:pdf</code>, <code>COBIT OR ITIL</code>.</li>
-              <li><strong>Google Académico</strong> para artículos revisados por pares y conteo de citas.</li>
-              <li><strong>Bases de datos académicas:</strong> Scopus, IEEE Xplore, Redalyc y SciELO, filtrando por año y área (sistemas de información, gestión).</li>
-              <li><strong>Fuentes normativas oficiales:</strong> ISO, ISACA, NIST y AXELOS.</li>
-              <li><strong>Operadores booleanos</strong> (AND, OR, NOT) y palabras clave en español e inglés: <em>IT governance, IT infrastructure management, IT asset management</em>.</li>
+      <div class="wrap">
+        <header class="sec-head">
+          <span class="sec-num">07</span>
+          <p class="label">Metodología y fuentes</p>
+          <h2 class="reveal">Cómo se <em>investigó</em>.</h2>
+        </header>
+
+        <div class="sources">
+          <div class="reveal">
+            <h3 class="mini">Técnicas de búsqueda</h3>
+            <ul class="method">
+              <li><b>Buscador general</b><span>Google, con operadores como <code>"gestión de infraestructura TI"</code>, <code>site:.edu</code>, <code>filetype:pdf</code> y <code>COBIT OR ITIL</code> para filtrar resultados.</span></li>
+              <li><b>Buscador académico</b><span>Google Académico, para localizar artículos revisados por pares y valorar su relevancia por número de citas.</span></li>
+              <li><b>Bases de datos académicas</b><span>Scopus, IEEE Xplore, Redalyc y SciELO, con filtros por año de publicación y área temática.</span></li>
+              <li><b>Fuentes normativas</b><span>Sitios oficiales de ISO, ISACA, NIST y AXELOS.</span></li>
+              <li><b>Operadores booleanos</b><span>AND, OR y NOT, con términos en español e inglés: <em>IT governance</em>, <em>IT infrastructure management</em>, <em>IT asset management</em>.</span></li>
             </ul>
           </div>
-          <div>
-            <h3>Referencias (APA 7)</h3>
+          <div class="reveal">
+            <h3 class="mini">Referencias · APA 7.ª edición</h3>
             <ul class="refs">
               <li>AXELOS. (2019). <em>ITIL Foundation: ITIL 4 edition</em>. TSO.</li>
               <li>Bharadwaj, A. S. (2000). A resource-based perspective on information technology capability and firm performance: An empirical investigation. <em>MIS Quarterly, 24</em>(1), 169–196.</li>
@@ -192,22 +397,27 @@
             </ul>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="conclusion">
-          <h3>Conclusión</h3>
-          <p>La gerencia de recursos TIC convierte la tecnología en un activo estratégico. Planificar evita inversiones sin rumbo; diseñar asegura que las soluciones encajen; implementar con orden reduce riesgos; y evaluar permite mejorar de forma continua. Sobre ese ciclo, la gestión de hardware y software, el monitoreo, la seguridad, la capacitación, la integración y la ética garantizan que la infraestructura sea confiable, eficiente y responsable. En una economía digital, gestionar bien la TI no es opcional: es una condición para competir.</p>
-        </div>
+    <!-- CONCLUSIÓN -->
+    <section class="conclusion">
+      <div class="wrap">
+        <p class="label">Conclusión</p>
+        <p class="conclusion-text reveal">Gerenciar los recursos de TIC es convertir la tecnología en un <em>activo estratégico</em>. Planificar evita inversiones sin rumbo; diseñar asegura que cada pieza encaje; implementar con orden reduce los riesgos, y evaluar permite mejorar sin descanso. Sobre ese ciclo, la gestión de activos, el monitoreo, la seguridad, la capacitación, la integración y la ética sostienen una infraestructura confiable, eficiente y responsable. En la economía digital, gestionar bien la tecnología no es opcional: es la condición para competir.</p>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container footer-inner">
-      <div>
-        <strong>Josue Moreno</strong> · Grupo 9GS241<br>
-        <span>Laboratorio #4 — Gerencia de Recursos de Tecnología de Información y Comunicación</span>
+    <div class="wrap">
+      <p class="footer-big">Josue Moreno</p>
+      <div class="footer-row">
+        <span>Grupo 9GS241</span>
+        <span>Laboratorio N.º 4 — Gerencia de Recursos de TIC</span>
+        <a href="#inicio">Volver arriba ↑</a>
       </div>
-      <a href="#inicio" class="btn btn-ghost small">↑ Volver arriba</a>
+      <p class="credits">Fotografías: Unsplash — Taylor Vick, Annie Spratt, Carlos Muza, Amsterdam City Archives, Tim van der Kuip, Luke Chesser, Jorge Salvador, İsmail Enes Ayhan, FlyD, Quilia, Dennis Brekke, Paul Hanaoka y Mathew Schwartz.</p>
     </div>
   </footer>
 
